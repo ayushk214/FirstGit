@@ -1,16 +1,16 @@
 //EXAMINE THE DOCUMENT OBJECT//
-console.dir(document);
-console.log(document.domain);
-console.log(document.title);
-//document.title=123;//
-console.log(document.head);
-console.log(document.body);
-console.log(document.all);
-console.log(document.doctype);
+// console.dir(document);
+// console.log(document.domain);
+// console.log(document.title);
+// //document.title=123;//
+// console.log(document.head);
+// console.log(document.body);
+// console.log(document.all);
+// console.log(document.doctype);
 
-//SELECTORS//
+// //SELECTORS//
 
-document.all[10].textContent="Hello";
+// document.all[10].textContent="Hello";
 
 //STYLING
 // var headerTitle =document.getElementById('header-title');
@@ -28,62 +28,77 @@ document.all[10].textContent="Hello";
 // for(var i=0; i<items.length; i++){
 //     items[i].style.fontWeight="bold";
 // }
-var li=document.getElementsByTagName('li');
-console.log(li);
-console.log(li[1]);
-li[2].style.fontWeight="bold";
+// var li=document.getElementsByTagName('li');
+// console.log(li);
+// console.log(li[1]);
+// li[2].style.fontWeight="bold";
 
-console.log(li[2]);
+// console.log(li[2]);
 // items[2].style.backgroundColor="green"//
 
-for(var i=0; i<li.length; i++){
-    li[i].style.fontWeight="bold";
-}
+// for(var i=0; i<li.length; i++){
+//     li[i].style.fontWeight="bold";
+// }
 
 //li[1].style.backgroundColor="green"//
 
-//QUERYSELECTOR//
-var header=document.querySelector('#main-header');
-header.style.borderBottom='solid 4px #ccc';
+// //QUERYSELECTOR//
+// var header=document.querySelector('#main-header');
+// header.style.borderBottom='solid 4px #ccc';
 
-//adding value in the addItem box//
-var input=document.querySelector('input');
-input.value='Hello World'
+// //adding value in the addItem box//
+// var input=document.querySelector('input');
+// input.value='Hello World'
 
-var submit=document.querySelector('input[type="submit"]');
-submit.value="SEND"
+// var submit=document.querySelector('input[type="submit"]');
+// submit.value="SEND"
 
-//changing the colour of firstList Item//
+// //changing the colour of firstList Item//
 
-var firstItem=document.querySelector('.list-group-item');
-firstItem.style.color='red';
+// var firstItem=document.querySelector('.list-group-item');
+// firstItem.style.color='red';
 
-//changing the color of the LastItem//
+// //changing the color of the LastItem//
 
-var LastItem=document.querySelector('.list-group-item:last-child');
-LastItem.style.color="blue";
+// var LastItem=document.querySelector('.list-group-item:last-child');
+// LastItem.style.color="blue";
 
-//changing color of second Item//
+// //changing color of second Item//
 
-var secondItem=document.querySelector('.list-group-item:nth-child(2)');
-secondItem.style.color="green";
+// var secondItem=document.querySelector('.list-group-item:nth-child(2)');
+// secondItem.style.color="green";
 
-//QUERYSELECTORALL//
+// //QUERYSELECTORALL//
 
-var titles=document.querySelectorAll('.title');
-console.log(titles)
-titles[0].textContent='Hello'
+// var titles=document.querySelectorAll('.title');
+// console.log(titles)
+// titles[0].textContent='Hello'
 
-//background color changing of even/odd list//
-var odd=document.querySelectorAll('li:nth-child(odd)');
-for(var i=0; i<odd.length;i++){
-    odd[i].style.backgroundColor="green";
-}
+// //background color changing of even/odd list//
+// var odd=document.querySelectorAll('li:nth-child(odd)');
+// for(var i=0; i<odd.length;i++){
+//     odd[i].style.backgroundColor="#f4f4f4";
+// }
 
-// // Select the 3rd li element (index 2) within the #myList element///
-// const thirdListItem = document.querySelectorAll('li')[2];
+//  // Select the 3rd li element (index 2) within the #myList element///
+//  const thirdListItem = document.querySelectorAll('li')[2];
 
-// // Hide the 3rd li element
+//  // Hide the 3rd li element
 // thirdListItem.style.display = 'none';
+
+//PART-2
+
+//TRAVERSING THE DOM//
+var itemlist=document.querySelector('#items');
+//parentNode
+console.log(items.parentNode);
+itemlist.parentNode.style.backgroundColor="#f4f4f4"
+
+//way to find the parentNode//
+console.log(itemlist.parentNode.parentNode.parentNode);
+
+
+
+
 
 
