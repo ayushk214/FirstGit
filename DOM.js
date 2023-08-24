@@ -116,7 +116,12 @@ var h1= document.querySelector('header h1');
 
 console.log(newDiv);
 
+newDiv.style.fontSize="20px";
+
 container.insertBefore(newDiv,h1);
+
+itemlist.insertBefore(newDiv, itemlist.firstElementChild);
+
 
 
 
