@@ -95,21 +95,40 @@ var itemlist=document.querySelector('#items');
 //console.log(itemlist.childNodes);//
 
 
-//childrenNodes//
-console.log(itemlist.children);
-console.log(itemlist.children[1]);
-itemlist.children[1].style.backgroundColor="yellow";
+// //childrenNodes//
+// console.log(itemlist.children);
+// console.log(itemlist.children[1]);
+// itemlist.children[1].style.backgroundColor="yellow";
 
-//firstChild (it includes the line space and linebreak)//
-console.log(itemlist.firstChild);
+// //firstChild (it includes the line space and linebreak)//
+// console.log(itemlist.firstChild);
 
-//firstElementChild//
-console.log(itemlist.firstElementChild);
-itemlist.firstElementChild.textContent="hello 1";
+// //firstElementChild//
+// console.log(itemlist.firstElementChild);
+// itemlist.firstElementChild.textContent="hello 1";
 
-//lastElementChild//
-console.log(itemlist.lastElementChild);
-itemlist.lastElementChild.textContent="hello 2";
+// //lastElementChild//
+// console.log(itemlist.lastElementChild);
+// itemlist.lastElementChild.textContent="hello 2";
+
+//nextSibling//
+console.log(itemlist.nextSibling);
+
+//nextElementSibling//
+console.log(itemlist.nextElementSibling);
+
+//previousSibling//
+console.log(itemlist.previousSibling);
+
+//previouselementSibling//
+console.log(itemlist.previousElementSibling);
+itemlist.previousElementSibling.style.color="red"
+
+
+
+
+
+
 
 
 
