@@ -91,10 +91,27 @@
 //TRAVERSING THE DOM//
 var itemlist=document.querySelector('#items');
 
-//parentElement//
-console.log(items.parentElement);
-itemlist.parentElement.style.backgroundColor="pink"
-console.log(itemlist.parentElement.parentElement.parentElement)
+//ChildNode (in the form of an array)//
+//console.log(itemlist.childNodes);//
+
+
+//childrenNodes//
+console.log(itemlist.children);
+console.log(itemlist.children[1]);
+itemlist.children[1].style.backgroundColor="yellow";
+
+//firstChild (it includes the line space and linebreak)//
+console.log(itemlist.firstChild);
+
+//firstElementChild//
+console.log(itemlist.firstElementChild);
+itemlist.firstElementChild.textContent="hello 1";
+
+//lastElementChild//
+console.log(itemlist.lastElementChild);
+itemlist.lastElementChild.textContent="hello 2";
+
+
 
 
 
