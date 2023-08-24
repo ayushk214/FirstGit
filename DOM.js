@@ -91,40 +91,32 @@
 //TRAVERSING THE DOM//
 var itemlist=document.querySelector('#items');
 
-//ChildNode (in the form of an array)//
-//console.log(itemlist.childNodes);//
+//createElement//
 
+//create a div
 
-// //childrenNodes//
-// console.log(itemlist.children);
-// console.log(itemlist.children[1]);
-// itemlist.children[1].style.backgroundColor="yellow";
+var newDiv=document.createElement('div');
 
-// //firstChild (it includes the line space and linebreak)//
-// console.log(itemlist.firstChild);
+//add class//
+newDiv.className='hello';
 
-// //firstElementChild//
-// console.log(itemlist.firstElementChild);
-// itemlist.firstElementChild.textContent="hello 1";
+//add id//
+newDiv.id='hello1';
+//add attr
+newDiv.setAttribute('title','hello div');
 
-// //lastElementChild//
-// console.log(itemlist.lastElementChild);
-// itemlist.lastElementChild.textContent="hello 2";
+//create a text node//
+var newDivText=document.createTextNode('hello world');
 
-//nextSibling//
-console.log(itemlist.nextSibling);
+//Add text to div//
+newDiv.appendChild(newDivText);
 
-//nextElementSibling//
-console.log(itemlist.nextElementSibling);
+var container=document.querySelector('header .container');
+var h1= document.querySelector('header h1');
 
-//previousSibling//
-console.log(itemlist.previousSibling);
+console.log(newDiv);
 
-//previouselementSibling//
-console.log(itemlist.previousElementSibling);
-itemlist.previousElementSibling.style.color="red"
-
-
+container.insertBefore(newDiv,h1);
 
 
 
