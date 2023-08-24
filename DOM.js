@@ -77,13 +77,13 @@ titles[0].textContent='Hello'
 //background color changing of even/odd list//
 var odd=document.querySelectorAll('li:nth-child(odd)');
 for(var i=0; i<odd.length;i++){
-    odd[i].style.backgroundColor="#f4f4f4";
+    odd[i].style.backgroundColor="green";
 }
 
-// Select the 3rd li element (index 2) within the #myList element///
-const thirdListItem = document.querySelectorAll('li')[2];
+// // Select the 3rd li element (index 2) within the #myList element///
+// const thirdListItem = document.querySelectorAll('li')[2];
 
-// Hide the 3rd li element
-thirdListItem.style.display = 'none';
+// // Hide the 3rd li element
+// thirdListItem.style.display = 'none';
 
 
