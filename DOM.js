@@ -90,15 +90,11 @@
 
 //TRAVERSING THE DOM//
 var itemlist=document.querySelector('#items');
-//parentNode
-console.log(items.parentNode);
-itemlist.parentNode.style.backgroundColor="#f4f4f4"
 
-//way to find the parentNode//
-console.log(itemlist.parentNode.parentNode.parentNode);
-
-
-
+//parentElement//
+console.log(items.parentElement);
+itemlist.parentElement.style.backgroundColor="pink"
+console.log(itemlist.parentElement.parentElement.parentElement)
 
 
 
