@@ -15,7 +15,13 @@ userForm.addEventListener('submit', function(event) {
         email: email
     };
 
-    // Convert the object to a JSON string and store in local storage
+    // Store the user data object in local storage
     localStorage.setItem('userData', JSON.stringify(userData));
-
 });
+
+// To retrieve the data and parse it back to an object
+const storedData = localStorage.getItem('userData');
+if (storedData) {
+    const parsedUserData = JSON.parse(storedData);
+    console.log(parsedUserData)
+}
