@@ -30,9 +30,18 @@ userForm.addEventListener('submit', function(event) {
 });
 
 function showUserOnScreen(object) {
+    const parentElem=document.getElementById('listOfItems');
     // Create a new list item element
     const listItem = document.createElement('li');
     listItem.textContent = `${object.name} - ${object.email} - ${object.mobile}`;
+
+//create a delete button//
+const deleteButton=document.createElement('button');
+deleteButton.textContent='Delete';
+deleteButton.addEventListener('click',function(){
+    parentElem.removeChild(listItem);
+});
+listItem.append(deleteButton)
 
     // Append the new list item to the list
     userList.appendChild(listItem);
