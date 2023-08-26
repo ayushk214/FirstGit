@@ -30,22 +30,39 @@ userForm.addEventListener('submit', function(event) {
 });
 
 function showUserOnScreen(object) {
-    const parentElem=document.getElementById('listOfItems');
+    const parentElem = document.getElementById('listOfItems');
     // Create a new list item element
     const listItem = document.createElement('li');
     listItem.textContent = `${object.name} - ${object.email} - ${object.mobile}`;
 
-//create a delete button//
-const deleteButton=document.createElement('button');
-deleteButton.textContent='Delete';
-deleteButton.addEventListener('click',function(){
-    parentElem.removeChild(listItem);
-});
-listItem.append(deleteButton)
+    // Create a delete button
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.addEventListener('click', function() {
+        parentElem.removeChild(listItem);
+        localStorage.removeItem(object.email);
+    });
 
-    // Append the new list item to the list
-    userList.appendChild(listItem);
+    // Create an edit button
+    const editButton = document.createElement('input');
+    editButton.type = 'button';
+    editButton.value = 'Edit';
+    editButton.onclick = () => {
+        parentElem.removeChild(listItem);
+        localStorage.removeItem(object.email);
+        document.getElementById('name').value = object.name;
+        document.getElementById('email').value = object.email;
+        document.getElementById('mobile').value = object.mobile;
+    };
+
+    listItem.appendChild(deleteButton);
+    listItem.appendChild(editButton);
+    parentElem.appendChild(listItem);
 }
+
+// Append the new list item to the list
+userList.appendChild(listItem);
+
 
 // Retrieve stored data and display on page load
 const storedData = localStorage.getItem('userData');
